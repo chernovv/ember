@@ -1,4 +1,4 @@
-/* router.js
+/* js/router.js
  */
 Todos.Router.map(function () {
   this.resource('todos', { path: '/' });
