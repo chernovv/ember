@@ -1,11 +1,10 @@
-/* /model/todo.js
+/* js/model/todo.js
  */
 Todos.Todo = DS.Model.extend({
     title: DS.attr('string'),
     isCompleted: DS.attr('boolean')
 })
 
-// ... additional lines truncated for brevity ...
 Todos.Todo.FIXTURES = [
  {
    id: 1,
@@ -15,7 +14,7 @@ Todos.Todo.FIXTURES = [
  {
    id: 2,
    title: 'second',
-   isCompleted: 0
+   isCompleted: false
  },
  {
    id: 3,

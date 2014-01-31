@@ -1,4 +1,4 @@
-/* app.js
+/* js/app.js
  */
 window.Todos = Ember.Application.create();
 
