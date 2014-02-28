@@ -1,7 +1,18 @@
 /* Put your CSS here */
 .ember-application {
-    margin: 20px;
+  margin: 20px;
 }
+
 .active{
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.out_for_post{
+  border: 1px solid black;
+  width: 350px;
+  height: auto;
+  margin-left: 100px;
+  padding: 15px;
+  background: #6f6f6f;
+  color: #fff;
 }
