@@ -12,9 +12,9 @@
  },{
    id: '2',
    title: 'Second',
-   isCompleted: false
+   isCompleted: true
  },{
    id: '3',
    title: 'Third',
-   isCompleted: false
+   isCompleted: true
  }];

@@ -44,5 +44,3 @@ Todos.TodosIndexRoute = Ember.Route.extend({
 
 
 
-
-

@@ -16,7 +16,8 @@
                          insert-newline="acceptChanges"}}
               {{else}}
                 {{input type="checkbox" checked=isCompleted class="toggle"}}
-                <label {{action "editTodo" on="doubleClick"}}>{{title}}</label><button {{action "removeTodo"}}class="destroy"></button>
+                <label {{action "editTodo" on="doubleClick"}}>{{title}}</label>
+                    <button {{action "removeTodo"}}class="destroy"></button>
               {{/if}}
             </li>
           {{/each}}
@@ -36,7 +37,7 @@
         
         {{outlet}}
         
-        <input type="checkbox" id="toggle-all">
+        {{input type="checkbox" id="toggle-all" checked=allAreDone}}
       </section>
 
       <footer id="footer">
@@ -44,7 +45,7 @@
           <strong>{{remaining}}</strong> &nbsp {{inflection}} left</span>
         <ul id="filters">
           <li>
-            <a href="all">All</a>
+            {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
           </li>
           <li>
             {{#link-to "todos.active" activeClass="selected"}}Active{{/link-to}}
@@ -53,10 +54,13 @@
             {{#link-to "todos.completed" activeClass="selected"}}Completed{{/link-to}}
           </li>
         </ul>
-
-        <button id="clear-completed">
-          Clear completed (1)
+        
+        {{#if hasCompleted}}
+        <button id="clear-completed" {{action "clearCompleted"}}>
+          Clear completed ({{completed}})
         </button>
+        {{/if}}
+        
       </footer>
   </section>
 
